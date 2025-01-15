@@ -1,5 +1,5 @@
 var express = require('express');
-const { signup, login, createProj, saveProject } = require('../controllers/userControllers');
+const { signup, login, createProj, saveProject, getProjects, getProject, deleteProject, editProject } = require('../controllers/userControllers');
 
 var router = express.Router();
 
@@ -11,4 +11,8 @@ router.get('/', function(req, res, next) {
  router.post("/login",login)
 router.post("/createProj",createProj)
 router.post("/saveProject", saveProject);
+router.post("/getProjects",getProjects)
+router.post("/getProject",getProject);
+router.post("/editProject",editProject)
+router.post("/deleteProject",deleteProject);
 module.exports = router;
