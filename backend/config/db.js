@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        // Add the database name after the cluster URL
-        await mongoose.connect("mongodb+srv://tejas:tej@cluster0.1qzqb.mongodb.net/codeIDE",{
+        // Add the database url and name after the cluster URL
+        await mongoose.connect("",{
  
             useNewUrlParser: true,
             useUnifiedTopology: true,
