@@ -3,11 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require('cors');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const connectDB = require('./config/db');
+
+const cors = require("cors");
+app.use(cors({ origin: "https://kodebase-frontend.onrender.com", credentials: true }));
+
 
 
 connectDB();
